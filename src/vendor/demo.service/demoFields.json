@@ -1,0 +1,570 @@
+{
+    "servicefix": [
+        {
+            "key": "actualinventoryProductId",
+            "label": "מוצר מלאי בפועל/סוג התקנה",
+            "lookupName": "serviceproductinventoryproduct",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 1,
+            "disabled": false
+        },
+        {
+            "key": "originalInstallationId",
+            "label": "קישור להתקנת מקור",
+            "lookupName": "serviceproductinventoryproduct",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 2,
+            "disabled": false
+        },
+        {
+            "key": "installatorlRemarks",
+            "label": "הערות מתקין",
+            "controlType": "textarea",
+            "required": true,
+            "order": 3,
+            "rows": 6,
+            "disabled": false
+        },
+        {
+            "key": "reportStatus",
+            "label": "סטטוס דיווח ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": true,
+            "order": 4,
+            "disabled": false
+        },
+        {
+            "key": "signature",
+            "label": "חתימת לקוח",
+            "controlType": "signature",
+            "icon": "arrow-dropdown",
+            "showDetails": false,
+            "required": true,
+            "order": 5
+        },
+        {
+            "key": "save",
+            "label": "שמירה",
+            "controlType": "engineeringtest",
+            "labelA": "קוד תקשורת",
+            "required": false,
+            "order": 6,
+            "disabled": false,
+            "onClick": "sendData",
+            "onClickA": "openUrl",
+            "class": "col-6",
+            "color": "dark",
+            "colorA": "danger"
+        }
+    ],
+    "securesystem": [
+        {
+            "key": "actualinventoryProductId",
+            "label": "מוצר מלאי בפועל/סוג התקנה",
+            "controlType": "drop-down",
+            "lookupName": "serviceproductinventoryproduct",
+            "required": true,
+            "order": 2,
+            "disabled": false
+        },
+        {
+            "key": "firstCutoffId",
+            "label": "ניתוק ראשון",
+            "controlType": "drop-down",
+            "lookupName": "cutoff",
+            "required": true,
+            "order": 3,
+            "disabled": false
+        },
+        {
+            "key": "secondCutoffId",
+            "label": "ניתוק שני",
+            "lookupName": "cutoff",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 4,
+            "disabled": false
+        },
+        {
+            "key": "cutoff",
+            "label": "ניתוק אחר",
+            "lookupName": "cutoff",
+            "controlType": "number",
+            "required": true,
+            "order": 5,
+            "placeholder": "אנא הקלד ניתוק",
+            "disabled": false
+        },
+        {
+            "key": "neutralizationMethod",
+            "label": "שיטת ניטרול ",
+            "controlType": "drop-down",
+            "lookupName": "assetneutralizationmethod",
+            "required": true,
+            "order": 6,
+            "disabled": false
+        },
+        {
+            "key": "neutralizationCode",
+            "label": "קוד נטרול",
+            "controlType": "text-box",
+            "value": "neutralizationCode",
+            "required": true,
+            "order": 7,
+            "placeholder": "אנא הקלד קוד",
+            "disabled": false
+        },
+        {
+            "key": "installatorlRemarks",
+            "label": "הערות מתקין",
+            "controlType": "text-box",
+            "value": "installatorlRemarks",
+            "required": true,
+            "order": 8,
+            "placeholder": "אנא הקלד הערות",
+            "disabled": false
+        },
+        {
+            "key": "reportStatus",
+            "label": "סטטוס דיווח ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": true,
+            "order": 9,
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemVersionid",
+            "label": "גרסת מערכת מיגון ",
+            "controlType": "drop-down",
+            "lookupName": "protectionsystemversionid",
+            "required": false,
+            "order": 10,
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemSN",
+            "label": "מספר אצווה - מח מיגון",
+            "value": "protectionSystemSN",
+            "controlType": "text-box",
+            "required": false,
+            "order": 11,
+            "placeholder": "אנא הקלד מספר",
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemBatchNumber",
+            "label": "מספר סריאלי - מח מיגון",
+            "controlType": "text-box",
+            "value": "protectionSystemBatchNumber",
+            "required": false,
+            "order": 12,
+            "placeholder": "אנא הקלד מספר",
+            "disabled": false
+        },
+        {
+            "key": "remoteControlIntegration",
+            "label": "איחוד שלטים",
+            "controlType": "toggle",
+            "required": false,
+            "order": 13,
+            "disabled": false
+        },
+        {
+            "key": "leechSN",
+            "label": "קוד סריאלי - עלוקה",
+            "value": "leechSN",
+            "controlType": "text-box",
+            "required": false,
+            "order": 14,
+            "placeholder": "אנא הקלד קוד",
+            "disabled": false
+        },
+        {
+            "key": "leechLearningCode",
+            "label": "קוד לימוד עלוקה",
+            "controlType": "drop-down",
+            "value": "leechLearningCode",
+            "required": false,
+            "order": 15,
+            "placeholder": "אנא הקלד קוד",
+            "disabled": false
+        },
+        {
+            "key": "lecchLocation",
+            "label": "מיקום עלוקה ",
+            "controlType": "drop-down",
+            "lookupName": "protectionsystemversionid",
+            "required": false,
+            "order": 16,
+            "disabled": false
+        },
+        {
+            "key": "signature",
+            "label": "חתימת לקוח",
+            "controlType": "signature",
+            "icon": "arrow-dropdown",
+            "showDetails": false,
+            "required": true,
+            "order": 17
+        },
+        {
+            "key": "save",
+            "label": "שמירה",
+            "labelA": "קוד תקשורת",
+            "controlType": "engineeringtest",
+            "required": false,
+            "order": 18,
+            "disabled": false,
+            "onClick": "sendData",
+            "onClickA": "openUrl",
+            "class": "col-6",
+            "color": "dark",
+            "colorA": "danger"
+        }
+    ],
+    "installproduct": [
+        {
+            "key": "actualinventoryProductId",
+            "label": "מוצר מלאי בפועל/סוג התקנה",
+            "controlType": "drop-down",
+            "lookupName": "serviceproductinventoryproduct",
+            "required": true,
+            "order": 1,
+            "disabled": false
+        },
+        {
+            "key": "originalInstallationId",
+            "label": "קישור להתקנת מקור",
+            "controlType": "drop-down",
+            "lookupName": "serviceproductinventoryproduct",
+            "required": true,
+            "order": 2,
+            "disabled": false
+        },
+        {
+            "key": "installatorlRemarks",
+            "label": "הערות מתקין",
+            "controlType": "textarea",
+            "required": true,
+            "order": 3,
+            "rows": 6,
+            "disabled": false
+        },
+        {
+            "key": "reportStatus",
+            "label": "סטטוס דיווח ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": true,
+            "order": 4,
+            "disabled": false
+        },
+        {
+            "key": "leechSN",
+            "label": "קוד סריאלי - עלוקה",
+            "controlType": "text-box",
+            "value": "leechSN",
+            "required": false,
+            "order": 5,
+            "disabled": false
+        },
+        {
+            "key": "leechLearningCode",
+            "label": "קוד לימוד עלוקה",
+            "controlType": "text-box",
+            "value": "leechLearningCode",
+            "required": false,
+            "order": 6,
+            "disabled": false
+        },
+        {
+            "key": "lecchLocation",
+            "label": "מיקום עלוקה ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": false,
+            "order": 7,
+            "disabled": false
+        },
+        {
+            "key": "signature",
+            "label": "חתימת לקוח",
+            "controlType": "signature",
+            "icon": "arrow-dropdown",
+            "showDetails": false,
+            "required": true,
+            "order": 8
+        },
+        {
+            "key": "save",
+            "label": "שמירה",
+            "labelA": "קוד תקשורת",
+            "controlType": "engineeringtest",
+            "required": false,
+            "order": 9,
+            "disabled": false,
+            "onClick": "sendData",
+            "onClickA": "openUrl",
+            "class": "col-6",
+            "color": "dark",
+            "colorA": "danger"
+        }
+    ],
+    "installeron": [
+        {
+            "key": "actualinventoryProductId",
+            "label": "מוצר מלאי בפועל/סוג התקנה",
+            "lookupName": "serviceproductinventoryproduct",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 1,
+            "disabled": false
+        },
+        {
+            "key": "ConnectionCode",
+            "label": "כפתור קוד תקשורת",
+            "value": "ConnectionCode",
+            "controlType": "text-box",
+            "required": true,
+            "order": 2,
+            "disabled": false
+        },
+        {
+            "key": "firstCutoffId",
+            "label": "ניתוק ראשון",
+            "lookupName": "cutoff",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 3,
+            "disabled": false
+        },
+        {
+            "key": "secondCutoffId",
+            "label": "ניתוק שני",
+            "lookupName": "cutoff",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 4,
+            "disabled": false
+        },
+        {
+            "key": "cutoff",
+            "label": "ניתוק אחר",
+            "controlType": "drop-down",
+            "required": true,
+            "order": 5,
+            "disabled": false
+        },
+        {
+            "key": "neutralizationMethod",
+            "label": "שיטת ניטרול ",
+            "controlType": "drop-down",
+            "lookupName": "assetneutralizationmethod",
+            "required": true,
+            "order": 6,
+            "disabled": false
+        },
+        {
+            "key": "neutralizationCode",
+            "label": "קוד נטרול",
+            "controlType": "text-box",
+            "value": "neutralizationCode",
+            "required": true,
+            "order": 7,
+            "disabled": false
+        },
+        {
+            "key": "installatorlRemarks",
+            "label": "הערות מתקין",
+            "controlType": "text-box",
+            "value": "installatorlRemarks",
+            "required": true,
+            "order": 8,
+            "disabled": false
+        },
+        {
+            "key": "reportStatus",
+            "label": "סטטוס דיווח ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": true,
+            "order": 9,
+            "disabled": false
+        },
+        {
+            "key": "installedSerialProductId",
+            "label": "RMU משדר להתקנה ",
+            "controlType": "text-box",
+            "value": "installedSerialProductId",
+            "required": false,
+            "order": 10,
+            "disabled": false
+        },
+        {
+            "key": "removedSerialProduct",
+            "label": "RMU משדר מפורק",
+            "controlType": "text-box",
+            "value": "removedSerialProduct",
+            "required": false,
+            "order": 11,
+            "disabled": false
+        },
+        {
+            "key": "cutoffConnection",
+            "label": "גישור ניתוק",
+            "controlType": "toggle",
+            "required": false,
+            "order": 12,
+            "disabled": false
+        },
+        {
+            "key": "towingDetector",
+            "label": "גלאי גרירה",
+            "controlType": "toggle",
+            "required": false,
+            "order": 13,
+            "disabled": false
+        },
+        {
+            "key": "detectionSystemLocation",
+            "label": "מיקום מערכת איתור ",
+            "controlType": "drop-down",
+            "lookupName": "detectionsystemlocation",
+            "required": false,
+            "order": 14,
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemVersionid",
+            "label": "גרסת מערכת מיגון ",
+            "controlType": "drop-down",
+            "lookupName": "protectionsystemversionid",
+            "required": false,
+            "order": 15,
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemSN",
+            "label": "מספר אצווה - מח מיגון",
+            "controlType": "text-box",
+            "value": "protectionSystemSN",
+            "required": false,
+            "order": 16,
+            "disabled": false
+        },
+        {
+            "key": "protectionSystemBatchNumber",
+            "label": "מספר סריאלי - מח מיגון",
+            "controlType": "text-box",
+            "value": "protectionSystemBatchNumber",
+            "required": false,
+            "order": 17,
+            "disabled": false
+        },
+        {
+            "key": "remoteControlIntegration",
+            "label": "איחוד שלטים",
+            "controlType": "toggle",
+            "required": false,
+            "order": 18,
+            "disabled": false
+        },
+        {
+            "key": "leechSN",
+            "label": "קוד סריאלי - עלוקה",
+            "controlType": "text-box",
+            "value": "leechSN",
+            "required": false,
+            "order": 19,
+            "disabled": false
+        },
+        {
+            "key": "leechLearningCode",
+            "label": "קוד לימוד עלוקה",
+            "controlType": "text-box",
+            "value": "leechLearningCode",
+            "required": false,
+            "order": 20,
+            "disabled": false
+        },
+        {
+            "key": "lecchLocation",
+            "label": "מיקום עלוקה ",
+            "controlType": "drop-down",
+            "lookupName": "protectionsystemversionid",
+            "required": false,
+            "order": 21,
+            "disabled": false
+        },
+        {
+            "key": "signature",
+            "label": "חתימת לקוח",
+            "type": "signature",
+            "icon": "arrow-dropdown",
+            "showDetails": false,
+            "required": true,
+            "order": 22
+        },
+        {
+            "key": "save",
+            "label": "שמירה",
+            "labelA": "קוד תקשורת",
+            "controlType": "engineeringtest",
+            "required": false,
+            "order": 23,
+            "disabled": false,
+            "onClick": "sendData",
+            "onClickA": "openUrl",
+            "class": "col-6",
+            "color": "dark",
+            "colorA": "danger"
+        }
+    ],
+    "dismantletransmitter": [
+        {
+            "key": "installatorlRemarks",
+            "label": "הערות מתקין",
+            "controlType": "textarea",
+            "required": true,
+            "order": 1,
+            "rows": 6,
+            "disabled": false
+        },
+        {
+            "key": "reportStatus",
+            "label": "סטטוס דיווח ",
+            "controlType": "drop-down",
+            "lookupName": "reportstatus",
+            "required": true,
+            "order": 2,
+            "disabled": false
+        },
+        {
+            "key": "signature",
+            "label": "חתימת לקוח",
+            "controlType": "signature",
+            "icon": "arrow-dropdown",
+            "showDetails": false,
+            "required": true,
+            "order": 3
+        },
+        {
+            "key": "save",
+            "label": "שמירה",
+            "controlType": "engineeringtest",
+            "labelA": "קוד תקשורת",
+            "required": false,
+            "order": 4,
+            "disabled": false,
+            "onClick": "sendData",
+            "onClickA": "openUrl",
+            "class": "col-6",
+            "color": "dark",
+            "colorA": "danger"
+        }
+    ]
+}

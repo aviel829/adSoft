@@ -1,0 +1,5 @@
+<ion-item [(formGroup)]="form">
+<ion-label class="pfield-label" [ngClass]="{'titletextbox': schema.disabled===true}">{{schema.label}}</ion-label>
+ <ion-input  [(ngModel)]="data[schema.key]" [formControlName]="schema.key"  [id]="schema.key" [type]="schema.type" placeholder="{{schema.placeholder}}" (blur)="onBlur($event)" [disabled]="schema.disabled"  ></ion-input>
+ <!-- [(ngModel)]="test[schema.key]"  -->
+</ion-item>

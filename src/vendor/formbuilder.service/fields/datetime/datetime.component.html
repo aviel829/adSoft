@@ -1,0 +1,5 @@
+
+<ion-item [(formGroup)]="form">
+ <ion-label  class="pfield-label">{{schema.label}}</ion-label>
+ <ion-datetime [displayFormat]="schema.format"  [(ngModel)]="data[schema.key]" (ngModelChange)="onModelChange($event)" [formControlName]="schema.key" [min]="schema.min" [max]="schema.max"  [id]="schema.key" [disabled]="schema.disabled"></ion-datetime>
+</ion-item>

@@ -1,0 +1,10 @@
+  <ion-item [(formGroup)]="form">
+    <!--<ion-row>-->
+    <ion-label  class="pfield-label">{{schema.label}}</ion-label>
+      <ion-select interface="popover" [(ngModel)]="data[schema.key]" (ngModelChange)="onModelChange($event)" [formControlName]="schema.key"  [id]="schema.key"  [disabled]="schema.disabled">
+      <ion-option *ngFor="let option of LookupService.lookups[schema.lookupName]"  [value] = "option.id" >{{option.value}}</ion-option>
+      </ion-select>
+    <!--</ion-row>-->
+  </ion-item>
+
+

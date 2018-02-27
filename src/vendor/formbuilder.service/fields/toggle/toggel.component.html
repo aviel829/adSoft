@@ -1,0 +1,4 @@
+<ion-item [(formGroup)]="form">
+    <ion-label class="pfield-label" >{{schema.label}}</ion-label>
+    <ion-toggle [formControlName]="schema.key"  [id]="schema.key"  [(ngModel)]="data[schema.key]" (ngModelChange)="onModelChange($event)" [disabled]="schema.disabled"></ion-toggle>
+</ion-item>

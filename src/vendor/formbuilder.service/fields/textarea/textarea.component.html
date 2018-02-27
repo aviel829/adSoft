@@ -1,0 +1,4 @@
+<ion-item [(formGroup)]="form">
+     <ion-label>{{schema.label}}</ion-label>
+     <ion-textarea [formControlName]="schema.key"  [id]="schema.key" [(ngModel)]="data[schema.key]" rows="6" placeholder="{{schema.placeholder}}" (blur)="onBlur($event)" [disabled]="schema.disabled">{{schema.disabled}}</ion-textarea>
+</ion-item>

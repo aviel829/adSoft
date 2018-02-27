@@ -1,0 +1,8 @@
+  <ion-item [(formGroup)]="form">
+    <ion-label  class="pfield-label">{{schema.label}}</ion-label>
+      <ion-select interface="popover" [(ngModel)]="data[schema.key]" [formControlName]="schema.key"  [id]="schema.key" (change)="onModelChange($event)"  [disabled]="schema.disabled">
+      <ion-option *ngFor="let option of LookupService.lookups[schema.lookupName] | myfilter:getFilterKey(schema.parentLookup , data[schema.filter])"  [value] = "option.id" >{{option.value}}</ion-option>
+      </ion-select>
+  </ion-item>
+
+

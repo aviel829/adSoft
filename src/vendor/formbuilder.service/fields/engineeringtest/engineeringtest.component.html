@@ -1,0 +1,10 @@
+<ion-col [(formGroup)]="form" col-6 class="nopadding" *ngIf="data.svRservice !== false">
+    <button [disabled]="data.pwInstaltionStatus === '2'" [id]="schema.key" ion-button full type="submit" (click)="onClick(schema.onClick, data, item)" [color]="schema.color">{{ schema.label }}
+        <div class="d-spinner text-left">
+			<ion-spinner icon="ripple" class="p-spinner" *ngIf="pendingEng !== false"></ion-spinner>
+        </div>
+    </button>
+
+    <button [id]="schema.key" ion-button full type="submit" (click)="onClick(schema.onClickA, data, item)" [color]="schema.colorA"
+    [disabled]="data.pwInstaltionStatus !== '2'">{{ schema.labelA }}</button> <!-- [disabled]="kodtikopen" -->
+</ion-col>

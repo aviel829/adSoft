@@ -1,0 +1,5 @@
+
+<ion-item [(formGroup)]="form">
+ <ion-label  class="pfield-label">{{schema.label}}</ion-label>
+ <ion-input (keypress)="_keyPress($event)" [(ngModel)]="data[schema.key]" [formControlName]="schema.key"  [id]="schema.key" [type]="schema.type" placeholder="{{schema.placeholder}}" (blur)="onBlur($event)" [disabled]="schema.disabled" [maxlength]  ="schema.maxlength"></ion-input>
+</ion-item>

@@ -1,0 +1,21 @@
+
+
+    <ion-item [formGroup]="form">
+      <ion-row color="light">
+       <label col-11> <b>{{schema.label}}</b>   </label>
+       <ion-icon class="signature-header-arrow" col-1  (click)="toggleDetails(schema)" color="dark"  [name]="schema.icon"></ion-icon> 
+      </ion-row>
+      <div class="psignature-pad {{schema.class}}">
+         <!--<div [hidden]="!schema.showDetails" class="psignature-pad">-->
+        <ion-row  (submit)="submit()" >
+             <div class="psignature-container">
+             <psignature-field [(data)]="data[schema.key]" [formControlName]="schema.key"></psignature-field>
+             </div>
+        </ion-row>
+        <ion-row>
+          <button (click)="submit()" color="dark"  [disabled]="!form.controls[schema.key].valid" ion-button small full col-6>אשר</button>
+          <button (click)="clear()" color="light" ion-button small full col-6>נקה</button>
+        </ion-row>
+     </div>
+    </ion-item>
+  

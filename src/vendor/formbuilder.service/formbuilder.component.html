@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let field of fields" class="form-row">
+
+
+        <!-- FOR TEXTBOX FIELD -->
+        <div [ngSwitch]="field.controlType" *ngIf="checkDisplay(field)">
+            <ptext-box *ngSwitchCase="'text-box'" [schema]="field" [(data)]="data" [form]="form" item-content></ptext-box><!--  [(test)]="test"  -->
+            <pnumber-field *ngSwitchCase="'number'" [schema]="field" [(data)]="data" [form]="form" item-content></pnumber-field>
+            <pdrop-down *ngSwitchCase="'drop-down'" [schema]="field" [(data)]="data" [form]="form" (change)="onBlur($event)" item-content></pdrop-down>
+            <pdrop-down-filtered *ngSwitchCase="'drop-down-filter'" [schema]="field" [(data)]="data" [form]="form" (change)="onBlur($event)" item-content></pdrop-down-filtered>
+            <pdate-time *ngSwitchCase="'Date'" [schema]="field" [(data)]="data" [form]="form" item-content></pdate-time>
+            <ptoggle *ngSwitchCase="'toggle'" [schema]="field" [(data)]="data" [form]="form" (change)="onBlur($event)" item-content></ptoggle>
+            <ptextarea *ngSwitchCase="'textarea'" [schema]="field" [(data)]="data" [form]="form" item-content></ptextarea>
+            <pcustomer-signature *ngSwitchCase="'signature'" [schema]="field"  [(data)]="data" [form]="form" item-content></pcustomer-signature>
+            <pbutton *ngSwitchCase="'button'" [schema]="field" [(data)]="data" [form]="form" [item]="item" item-content></pbutton>
+            <pengineering-test *ngSwitchCase="'engineeringtest'" [schema]="field" [(data)]="data" [form]="form" [item]="item" item-content></pengineering-test>
+            <plabel *ngSwitchCase="'label'" [schema]="field" [(data)]="data" [form]="form" item-content></plabel>    
+        </div>
+    </div>
+
+    <!--<button full color="dark" (click)="doTest()">send</button>-->
+    <!--<ion-footer>
+         <button ion-button full danger type="submit" [disabled]="!form.valid">הפעלת קוד תקשורת</button>
+    </ion-footer>-->
+</form>
