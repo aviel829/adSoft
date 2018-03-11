@@ -3,13 +3,13 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { FormGroup } from '@angular/forms';
 import { DataService } from '../../vendor/data.service/data.service';
 
-// FEVELOPMENT
+// DEVELOPMENT
 import { FormBuilderService } from '../formbuilder.service/shared/formbuilder.service';
 import { PFieldBase } from './model/fieldbase.model';
 
 @Component({
-  selector: 'pform-builder',
-  templateUrl: 'pform-builder.component.html'
+  selector: 'formbuilder',
+  templateUrl: 'formbuilder.component.html'
 })
 export class FormBuilder {
 
@@ -23,7 +23,7 @@ export class FormBuilder {
   payLoad = '';
 
 
-  constructor(public navCtrl: NavController,  public navParams: NavParams, private formBuilderService: FormBuilderService, private DataService: DataService, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilderService: FormBuilderService, private DataService: DataService, public viewCtrl: ViewController) {
 
   }
 
@@ -33,7 +33,7 @@ export class FormBuilder {
     this.form = this.formBuilderService.toFormGroup(this.fields);
   }
 
-  onBlur(event){
+  onBlur(event) {
     console.log(JSON.stringify(event));
     this.change.emit(event);
   }
@@ -46,9 +46,9 @@ export class FormBuilder {
   //     console.log("Do test end");
   // }
 
-  saveItemOfWorkOrders(){
+  saveItemOfWorkOrders() {
     console.log("Do testttt start");
-      console.log("Do test end");
+    console.log("Do test end");
   }
 
   onSubmit() {

@@ -23,7 +23,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { Geolocation } from '@ionic-native/geolocation';
 
 //VENDOR
-import { Logger } from "../vendor/logger.service/logger.service";
+// import { Logger } from "../vendor/logger.service/logger.service";
 import { DataService } from '../vendor/data.service/data.service';
 import { DemoService } from '../vendor/demo.service/demo.service';
 import { UserService } from '../vendor/user.service/user.service';
@@ -43,7 +43,7 @@ import { Modal } from "../vendor/modal.service/modal.component";
 import { ModalService } from "../vendor/modal.service/modal.service";
 import { SignatureFieldComponent } from "../vendor/signaturefield.service/signaturefield.component";
 import { FormBuilder } from "../vendor/formbuilder.service/formbuilder.component";
-import { CustomerSignatureComponent } from "../vendor/formbuilder.service/fields/customersignature/customersignature.component";
+// import { CustomerSignatureComponent } from "../vendor/formbuilder.service/fields/customersignature/customersignature.component";
 import { TextBoxComponent } from "../vendor/formbuilder.service/fields/textbox/textbox.component";
 import { DropDownComponent } from "../vendor/formbuilder.service/fields/dropdown/dropdown.component";
 import { DropDownFilteredComponent, MyFilterPipe } from "../vendor/formbuilder.service/fields/dropdownfiltered/dropdownfiltered.component";
@@ -55,10 +55,11 @@ import { ButtonComponent } from "../vendor/formbuilder.service/fields/button/but
 import { EngineeringTestComponent } from '../vendor/formbuilder.service/fields/engineeringtest/engineeringtest.component';
 import { LabelComponent } from "../vendor/formbuilder.service/fields/label/label.component";
 import { httpFactory } from "../vendor/auth.interceptor/auth.factory";
-import { HttpModule } from '@angular/http/src/http_module';
-import { Http } from '@angular/http/src/http';
-import { XHRBackend } from '@angular/http/src/backends/xhr_backend';
-import { RequestOptions } from '@angular/http/src/base_request_options';
+import { Http, HttpModule,XHRBackend,RequestOptions } from '@angular/http';
+import { EventModalPage } from '../pages/event-modal/event-modal';
+
+import { NgCalendarModule  } from 'ionic2-calendar';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -67,22 +68,30 @@ import { RequestOptions } from '@angular/http/src/base_request_options';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    EventModalPage,
+    SignatureFieldComponent
   ],
   imports: [
+    NgCalendarModule,
     BrowserModule,
+    CommonModule,
     IonicModule.forRoot(MyApp),
     // CloudModule.forRoot(CloudSettingsToken),
     HttpModule,
     SignaturePadModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    CustomerSignatureComponent,
+    TabsPage,
+    AboutPage,
+    ContactPage,
+    EventModalPage,
+    // CustomerSignatureComponent,
   ],
   providers: [
     Geolocation,
@@ -97,9 +106,8 @@ import { RequestOptions } from '@angular/http/src/base_request_options';
     DialogService,
     Alert,
     Toast,
-    Logger,
     LOG_LOGGER_PROVIDERS,
-    Logger,
+    // Logger,
     AuthService,
     AdalService,
     FormBuilderService,

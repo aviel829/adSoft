@@ -3,8 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { PTextBox } from '../../model/text-box.model';
 
 @Component({
-  selector: 'ptext-box',
-  templateUrl: './ptext-box.component.html'
+  selector: 'textbox',
+  templateUrl: './textbox.component.html'
 })
 export class TextBoxComponent {
   @Input() form: FormGroup;

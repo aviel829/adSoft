@@ -3,8 +3,8 @@ import { FormGroup }        from '@angular/forms';
 import {PDateTime}         from '../../model/datetime.model';
 
 @Component({
-  selector: 'pdate-time',
-  templateUrl: './pdate-time.component.html'
+  selector: 'datetime',
+  templateUrl: './datetime.component.html'
 })
 export class DateTimeComponent {
   @Input() form: FormGroup;

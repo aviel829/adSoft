@@ -66,7 +66,7 @@ import { NavController } from 'ionic-angular';
 import {SignatureFieldComponent} from "../vendor/psignature-field/psignature-field.component";
 
 @Component({
-  selector: 'page-home',
+  selector: 'age-home',
   templateUrl: 'home.html'
 })
 export class HomePage {

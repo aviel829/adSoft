@@ -3,8 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { PNumberField } from '../../model/numberfield.model';
 
 @Component({
-  selector: 'pnumber-field',
-  templateUrl: './pnumber-field.component.html'
+  selector: 'numberfield',
+  templateUrl: './numberfield.component.html'
 })
 export class NumberFieldComponent {
   @Input() form: FormGroup;

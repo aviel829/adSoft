@@ -3,8 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { PTextarea } from '../../model/textarea.model';
 
 @Component({
-  selector: 'ptextarea',
-  templateUrl: './ptextarea.component.html'
+  selector: 'textarea',
+  templateUrl: './textarea.component.html'
 })
 export class TextareaComponent {
   @Input() form: FormGroup;

@@ -10,8 +10,8 @@ import { DemoService } from '../../../../vendor/demo.service/demo.service';
 import { EventService } from '../../../../vendor/event.service/event.service';
 
 @Component({
-  selector: 'pengineering-test',
-  templateUrl: './pengineering-test.component.html'
+  selector: 'engineeringtest',
+  templateUrl: './engineeringtest.component.html'
 })
 export class EngineeringTestComponent {
   @Input() form: FormGroup;

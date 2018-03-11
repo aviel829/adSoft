@@ -3,8 +3,8 @@ import { FormGroup }        from '@angular/forms';
 import {PToggle}         from '../../model/toggle.model';
 
 @Component({
-  selector: 'ptoggle',
-  templateUrl: './ptoggel.component.html'
+  selector: 'toggle',
+  templateUrl: './toggel.component.html'
 })
 export class ToggleComponent {
   @Input() form: FormGroup;

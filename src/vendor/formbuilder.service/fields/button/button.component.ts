@@ -6,8 +6,8 @@ import { LocalStorageService } from '../../../../vendor/localstorage.service/loc
 import { Alert } from '../../../../vendor/alert.service/alert.service';
 
 @Component({
-  selector: 'pbutton',
-  templateUrl: './pbutton.component.html'
+  selector: 'button',
+  templateUrl: './button.component.html'
 })
 export class ButtonComponent {
   @Input() form: FormGroup;

@@ -5,8 +5,8 @@ import { LookupService } from '../../../../vendor/lookup.service/lookup.service'
 import { EventService } from '../../../../vendor/event.service/event.service';
 
 @Component({
-  selector: 'pdrop-down',
-  templateUrl: './pdrop-down.component.html'
+  selector: 'dropdown',
+  templateUrl: './dropdown.component.html'
 })
 export class DropDownComponent {
   @Input() form: FormGroup;

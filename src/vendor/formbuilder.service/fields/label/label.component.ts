@@ -3,8 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { PLabel } from '../../model/label.model';
 
 @Component({
-  selector: 'plabel',
-  templateUrl: './plabel.component.html'
+  selector: 'label',
+  templateUrl: './label.component.html'
 })
 export class LabelComponent {
   @Input() form: FormGroup;

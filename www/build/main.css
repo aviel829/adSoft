@@ -25678,22 +25678,6 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-ion-content.customer-signature {
-  background-color: #F5F5F5;
-}
-
-ion-icon.signature-header-arrow {
-  font-size: 0.9em;
-}
-
-.psignature-pad {
-  display: none;
-}
-
-.signature-header-arrow {
-  margin-right: -3px;
-}
-
 canvas {
   width: 100%;
 }

@@ -6,8 +6,8 @@ import { EventService } from '../../../../vendor/event.service/event.service';
 
 
 @Component({
-  selector: 'pdrop-down-filtered',
-  templateUrl: './pdrop-down-filtered.component.html'
+  selector: 'dropdownfiltered',
+  templateUrl: './dropdownfiltered.component.html'
 })
 export class DropDownFilteredComponent {
   @Input() form: FormGroup;

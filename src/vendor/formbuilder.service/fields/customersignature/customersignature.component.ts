@@ -5,8 +5,8 @@ import {SignatureFieldComponent} from "../../../../vendor/signaturefield.service
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'pcustomer-signature',
-  templateUrl: './pcustomer-signature.component.html'
+  selector: 'customersignature',
+  templateUrl: './customersignature.component.html'
 })
 export class CustomerSignatureComponent implements OnInit {
   @Input() form: FormGroup;
